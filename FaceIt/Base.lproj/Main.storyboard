@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FaceIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4J-1L-cHV" customClass="FaceView" customModule="FaceIt" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Tq-cf-nCj" customClass="CycleView" customModule="FaceIt" customModuleProvider="target">
+                                <rect key="frame" x="42" y="247" width="146" height="172"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资期限分布" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXZ-Wp-qxN">
+                                        <rect key="frame" x="25" y="65.5" width="96" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yXZ-Wp-qxN" firstAttribute="centerX" secondItem="1Tq-cf-nCj" secondAttribute="centerX" id="Tyb-mB-77u"/>
+                                    <constraint firstAttribute="trailing" secondItem="yXZ-Wp-qxN" secondAttribute="trailing" constant="25" id="t6c-Os-Zk0"/>
+                                    <constraint firstItem="yXZ-Wp-qxN" firstAttribute="centerY" secondItem="1Tq-cf-nCj" secondAttribute="centerY" id="tzC-0A-nn5"/>
+                                    <constraint firstItem="yXZ-Wp-qxN" firstAttribute="leading" secondItem="1Tq-cf-nCj" secondAttribute="leading" constant="25" id="xay-ua-IJQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1Tq-cf-nCj" secondAttribute="bottom" constant="248" id="6ns-Bq-mo1"/>
+                            <constraint firstItem="1Tq-cf-nCj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="DlK-gl-eID"/>
+                            <constraint firstItem="O4J-1L-cHV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MpX-7j-Ib7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Tq-cf-nCj" secondAttribute="trailing" constant="187" id="NhW-w6-xjV"/>
+                            <constraint firstItem="1Tq-cf-nCj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="227" id="POY-lb-JTH"/>
+                            <constraint firstItem="O4J-1L-cHV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dkR-Nr-E6A"/>
+                            <constraint firstItem="O4J-1L-cHV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kFn-1H-fQr"/>
+                            <constraint firstAttribute="trailing" secondItem="O4J-1L-cHV" secondAttribute="trailing" id="uI2-ld-DQo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cycleView" destination="1Tq-cf-nCj" id="Cx6-Fe-DG8"/>
+                        <outlet property="faceView" destination="O4J-1L-cHV" id="Qej-hr-p4J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
